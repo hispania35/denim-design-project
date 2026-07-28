@@ -1,0 +1,5 @@
+chrome >= 60
+firefox >= 60
+safari >= 12
+android >= 5
+ios_saf >= 12

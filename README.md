@@ -1,3 +1,3 @@
-# denim-design-project
+# language-studio-landing
 
-Initial repository setup for pr-poehali-dev/denim-design-project
+Initial repository setup for pr-poehali-dev/language-studio-landing

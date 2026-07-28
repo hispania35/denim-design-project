@@ -1,61 +1,310 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Поехали</title>
-    <meta name="description" content="Опишите идею — нейросеть сделает приложение или сайт за 5 минут. Запустите сами или доверьте фрилансеру."/>
-    <meta name="author" content="poehali.dev"/>
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-    <meta property="og:title" content="Поехали">
-    <meta property="og:description" content="Опишите идею — нейросеть сделает приложение или сайт за 5 минут. Запустите сами или доверьте фрилансеру.">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta property="og:image" content="https://cdn.poehali.dev/intertnal/img/phl2/og-main-2.webp">
-    <meta name="twitter:image" content="https://cdn.poehali.dev/intertnal/img/phl2/og-main-2.webp">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
+    <title>Курсы испанского, немецкого, английского онлайн по всей России | Hispania</title>
+    <meta name="description" content="Языковая студия Hispania — онлайн-курсы испанского, немецкого и английского языка по всей России. Мини-группы до 6 человек и индивидуальные занятия, опытные преподаватели, обучение из любого города. Первое занятие бесплатно!"/>
+    <meta name="keywords" content="курсы испанского онлайн, курсы немецкого онлайн, курсы английского онлайн, индивидуальные занятия испанским, индивидуальные уроки немецкого, репетитор один на один, изучение испанского по всей России, языковая школа онлайн, репетитор испанского, выучить испанский язык, курсы иностранных языков онлайн, языковая студия Hispania"/>
+    <meta name="geo.region" content="RU"/>
+    <meta name="geo.placename" content="Россия"/>
+    <meta name="author" content="Hispania"/>
+    <meta name="robots" content="index, follow"/>
+    <meta name="yandex" content="index, follow"/>
+    <meta name="zen-verification" content="qsxcXmPYuOcQW80fbOvaHNXt0EezMHbL5d3a8TMtYkJRnHCpY9RNOtuBXJQs8OdD" />
+    <meta name="google-site-verification" content="cVRgqYR3dnu5XRrRqczC189uyMOr9y7aEFXXsnhtWuA" />
+    <link rel="canonical" href="https://hispania35.online/"/>
+    <script>
+    (function () {
+      var SITE = "https://hispania35.online";
+      var C = {
+        "moskva":["в Москве","Москвы"],"sankt-peterburg":["в Санкт-Петербурге","Санкт-Петербурга"],
+        "novosibirsk":["в Новосибирске","Новосибирска"],"ekaterinburg":["в Екатеринбурге","Екатеринбурга"],
+        "kazan":["в Казани","Казани"],"nizhniy-novgorod":["в Нижнем Новгороде","Нижнего Новгорода"],
+        "chelyabinsk":["в Челябинске","Челябинска"],"krasnoyarsk":["в Красноярске","Красноярска"],
+        "samara":["в Самаре","Самары"],"ufa":["в Уфе","Уфы"],"rostov-na-donu":["в Ростове-на-Дону","Ростова-на-Дону"],
+        "omsk":["в Омске","Омска"],"krasnodar":["в Краснодаре","Краснодара"],"voronezh":["в Воронеже","Воронежа"],
+        "perm":["в Перми","Перми"],"volgograd":["в Волгограде","Волгограда"],"saratov":["в Саратове","Саратова"],
+        "tyumen":["в Тюмени","Тюмени"],"tolyatti":["в Тольятти","Тольятти"],"izhevsk":["в Ижевске","Ижевска"],
+        "barnaul":["в Барнауле","Барнаула"],"ulyanovsk":["в Ульяновске","Ульяновска"],"irkutsk":["в Иркутске","Иркутска"],
+        "habarovsk":["в Хабаровске","Хабаровска"],"yaroslavl":["в Ярославле","Ярославля"],"vladivostok":["во Владивостоке","Владивостока"],
+        "mahachkala":["в Махачкале","Махачкалы"],"tomsk":["в Томске","Томска"],"orenburg":["в Оренбурге","Оренбурга"],
+        "kemerovo":["в Кемерово","Кемерово"],"novokuznetsk":["в Новокузнецке","Новокузнецка"],"ryazan":["в Рязани","Рязани"],
+        "naberezhnye-chelny":["в Набережных Челнах","Набережных Челнов"],"astrahan":["в Астрахани","Астрахани"],
+        "penza":["в Пензе","Пензы"],"lipetsk":["в Липецке","Липецка"],"kirov":["в Кирове","Кирова"],
+        "cheboksary":["в Чебоксарах","Чебоксар"],"tula":["в Туле","Тулы"],"kaliningrad":["в Калининграде","Калининграда"],
+        "balashiha":["в Балашихе","Балашихи"],"kursk":["в Курске","Курска"],"stavropol":["в Ставрополе","Ставрополя"],
+        "ulan-ude":["в Улан-Удэ","Улан-Удэ"],"tver":["в Твери","Твери"],"magnitogorsk":["в Магнитогорске","Магнитогорска"],
+        "sochi":["в Сочи","Сочи"],"ivanovo":["в Иваново","Иваново"],"bryansk":["в Брянске","Брянска"],
+        "belgorod":["в Белгороде","Белгорода"],"surgut":["в Сургуте","Сургута"],
+        "minsk":["в Минске","Минска"],"gomel":["в Гомеле","Гомеля"],"brest":["в Бресте","Бреста"],
+        "vitebsk":["в Витебске","Витебска"],"grodno":["в Гродно","Гродно"],"mogilev":["в Могилёве","Могилёва"]
+      };
+      var slug = location.pathname.replace(/^\/+|\/+$/g, "");
+      var title, desc;
+      if (slug === "belarus") {
+        title = "Курсы испанского, немецкого, английского в Беларуси онлайн | Hispania";
+        desc = "Онлайн-курсы иностранных языков в Беларуси: испанский, немецкий, английский для жителей Минска, Гомеля, Бреста и других городов. Мини-группы и индивидуальные занятия, первое занятие бесплатно.";
+      } else if (C[slug]) {
+        title = "Курсы испанского, немецкого, английского " + C[slug][0] + " онлайн | Hispania";
+        desc = "Курсы иностранных языков " + C[slug][0] + " онлайн: испанский, немецкий, английский. Мини-группы до 6 человек и индивидуальные занятия, опытные преподаватели, первое занятие бесплатно.";
+      }
+      if (title) {
+        var set = function (sel, attr, val) {
+          var el = document.head.querySelector(sel);
+          if (el) el.setAttribute(attr, val);
+        };
+        document.title = title;
+        set('meta[name="description"]', "content", desc);
+        set('meta[property="og:title"]', "content", title);
+        set('meta[property="og:description"]', "content", desc);
+      }
+    })();
+    </script>
+    <link rel="icon" type="image/png" href="https://cdn.poehali.dev/projects/c066c37a-f840-40ae-bf25-35290452380d/bucket/e2a102db-1630-4af2-9bfc-bad201f7b790.png">
+    <link rel="apple-touch-icon" href="https://cdn.poehali.dev/projects/c066c37a-f840-40ae-bf25-35290452380d/bucket/e2a102db-1630-4af2-9bfc-bad201f7b790.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdn.poehali.dev" crossorigin>
+    <link rel="preload" as="image" href="https://cdn.poehali.dev/projects/c066c37a-f840-40ae-bf25-35290452380d/files/803028f6-6301-487d-bdfa-c9513189e123.jpg">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://hispania35.online/">
+    <meta property="og:title" content="Курсы испанского, немецкого, английского онлайн по всей России | Hispania">
+    <meta property="og:description" content="Языковая студия Hispania — мини-группы до 6 человек и индивидуальные занятия, опытные преподаватели, онлайн-обучение из любого города России. Первое занятие бесплатно!">
+    <meta property="og:image:width" content="1424">
+    <meta property="og:image:height" content="748">
+    <meta property="og:image:alt" content="Hispania35 — курсы испанского онлайн">
+    <meta property="og:image" content="https://cdn.poehali.dev/projects/c066c37a-f840-40ae-bf25-35290452380d/bucket/87815cd6-0768-458b-98ac-20ec6d3dc30a.png">
+    <meta name="twitter:image" content="https://cdn.poehali.dev/projects/c066c37a-f840-40ae-bf25-35290452380d/bucket/87815cd6-0768-458b-98ac-20ec6d3dc30a.png">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LanguageSchool",
+      "name": "Hispania — Языковая студия",
+      "url": "https://hispania35.online",
+      "logo": "https://cdn.poehali.dev/projects/c066c37a-f840-40ae-bf25-35290452380d/bucket/e2a102db-1630-4af2-9bfc-bad201f7b790.png",
+      "image": "https://cdn.poehali.dev/projects/c066c37a-f840-40ae-bf25-35290452380d/bucket/87815cd6-0768-458b-98ac-20ec6d3dc30a.png",
+      "description": "Языковая студия Hispania — курсы испанского, немецкого и английского языка в Вологде и онлайн. Мини-группы до 6 человек и индивидуальные занятия, опытные преподаватели, бесплатное пробное занятие.",
+      "telephone": "+7-921-123-82-21",
+      "email": "hispania35@yandex.ru",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "ул. Козленская, 43б, офис 10",
+        "addressLocality": "Вологда",
+        "addressRegion": "Вологодская область",
+        "addressCountry": "RU"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "59.2239",
+        "longitude": "39.8845"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "Россия"
+      },
+      "availableLanguage": ["Spanish", "German", "English", "Russian"],
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+          "opens": "09:00",
+          "closes": "21:00"
+        }
+      ],
+      "sameAs": [
+        "https://vk.com/club119672828"
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Языковые курсы",
+        "itemListElement": [
+          {"@type": "Offer", "itemOffered": {"@type": "Course", "name": "Курсы испанского языка", "description": "Обучение испанскому языку онлайн и в Вологде, мини-группы и индивидуальные занятия", "hasCourseInstance": [{"@type": "CourseInstance", "name": "Групповые занятия", "courseMode": "online", "courseWorkload": "PT2H"}, {"@type": "CourseInstance", "name": "Индивидуальные занятия", "courseMode": "online", "courseWorkload": "PT1H"}]}},
+          {"@type": "Offer", "itemOffered": {"@type": "Course", "name": "Курсы немецкого языка", "description": "Обучение немецкому языку онлайн и в Вологде, мини-группы и индивидуальные занятия", "hasCourseInstance": [{"@type": "CourseInstance", "name": "Групповые занятия", "courseMode": "online", "courseWorkload": "PT2H"}, {"@type": "CourseInstance", "name": "Индивидуальные занятия", "courseMode": "online", "courseWorkload": "PT1H"}]}},
+          {"@type": "Offer", "itemOffered": {"@type": "Course", "name": "Курсы английского языка", "description": "Обучение английскому языку онлайн и в Вологде, мини-группы и индивидуальные занятия", "hasCourseInstance": [{"@type": "CourseInstance", "name": "Групповые занятия", "courseMode": "online", "courseWorkload": "PT2H"}, {"@type": "CourseInstance", "name": "Индивидуальные занятия", "courseMode": "online", "courseWorkload": "PT1H"}]}},
+          {"@type": "Offer", "itemOffered": {"@type": "Course", "name": "Индивидуальные занятия", "description": "Персональные занятия один на один с преподавателем — испанский, немецкий, английский, онлайн и в Вологде", "hasCourseInstance": [{"@type": "CourseInstance", "name": "Индивидуальные занятия один на один", "courseMode": "online", "courseWorkload": "PT1H"}]}}
+        ]
+      }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Hispania — Языковая студия",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5",
+        "reviewCount": "500",
+        "bestRating": "5",
+        "worstRating": "1"
+      },
+      "review": [
+        {
+          "@type": "Review",
+          "author": {"@type": "Person", "name": "Анна К."},
+          "reviewRating": {"@type": "Rating", "ratingValue": "5"},
+          "reviewBody": "За полгода занятий я перешла с нуля до уверенного разговорного уровня. Методика действительно работает — начала говорить уже на первом уроке!"
+        },
+        {
+          "@type": "Review",
+          "author": {"@type": "Person", "name": "Михаил С."},
+          "reviewRating": {"@type": "Rating", "ratingValue": "5"},
+          "reviewBody": "Готовился к поступлению в немецкий университет. Преподаватель помог не только с языком, но и с подготовкой к Goethe-Zertifikat. Сдал с первого раза!"
+        },
+        {
+          "@type": "Review",
+          "author": {"@type": "Person", "name": "Екатерина Л."},
+          "reviewRating": {"@type": "Rating", "ratingValue": "5"},
+          "reviewBody": "Хотела выучить испанский для путешествий. Мини-группа — это отличный формат, всегда есть живое общение и внимание преподавателя."
+        },
+        {
+          "@type": "Review",
+          "author": {"@type": "Person", "name": "Дмитрий В."},
+          "reviewRating": {"@type": "Rating", "ratingValue": "5"},
+          "reviewBody": "Занимаюсь онлайн уже год. Очень удобно — никуда не нужно ехать, а качество занятий ничем не уступает очному формату. Рекомендую!"
+        }
+      ]
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Сколько человек в группе?",
+          "acceptedAnswer": {"@type": "Answer", "text": "В наших группах максимум 6 человек — это позволяет уделять внимание каждому ученику и создать живую разговорную атмосферу."}
+        },
+        {
+          "@type": "Question",
+          "name": "Можно ли заниматься онлайн?",
+          "acceptedAnswer": {"@type": "Answer", "text": "Да, все курсы доступны онлайн. Занятия проходят в видеоформате, качество не уступает очным урокам."}
+        },
+        {
+          "@type": "Question",
+          "name": "Есть ли бесплатное пробное занятие?",
+          "acceptedAnswer": {"@type": "Answer", "text": "Да, первое занятие бесплатно. Вы познакомитесь с преподавателем, определите свой уровень и решите, подходит ли вам наш формат."}
+        },
+        {
+          "@type": "Question",
+          "name": "Какие языки можно изучать?",
+          "acceptedAnswer": {"@type": "Answer", "text": "В студии Hispania вы можете изучать испанский, немецкий и английский языки — в мини-группах или индивидуально, онлайн или в Вологде."}
+        },
+        {
+          "@type": "Question",
+          "name": "Можно ли заниматься индивидуально?",
+          "acceptedAnswer": {"@type": "Answer", "text": "Да, мы проводим индивидуальные занятия один на один с преподавателем — по персональной программе и в удобном графике. Это подходит тем, кто хочет максимально быстрый результат или готовится к конкретной цели."}
+        },
+        {
+          "@type": "Question",
+          "name": "Сколько стоят занятия?",
+          "acceptedAnswer": {"@type": "Answer", "text": "Стоимость зависит от формата: групповые занятия от 1500 руб./месяц, индивидуальные — по запросу. Первое занятие всегда бесплатно."}
+        }
+      ]
+    }
+    </script>
 
     <!-- IMPORTANT: DO NOT REMOVE THIS SCRIPT TAG OR THIS COMMENT! -->
 
     <!-- IMPORTANT: DO NOT REMOVE THIS SCRIPT TAG OR THIS COMMENT! -->
     <script src="https://cdn.poehali.dev/intertnal/js/pp-min-2.js"></script>
+    <script>
+      if (!('scrollBehavior' in document.documentElement.style)) {
+        var _origSIV = Element.prototype.scrollIntoView;
+        Element.prototype.scrollIntoView = function(opts) {
+          if (opts && opts.behavior === 'smooth') {
+            var target = this, start = window.pageYOffset;
+            var end = target.getBoundingClientRect().top + start;
+            var dist = end - start, dur = 600, t0 = null;
+            function step(ts) {
+              if (!t0) t0 = ts;
+              var p = Math.min((ts - t0) / dur, 1);
+              var e = p < 0.5 ? 2*p*p : -1+(4-2*p)*p;
+              window.scrollTo(0, start + dist * e);
+              if (p < 1) requestAnimationFrame(step);
+            }
+            requestAnimationFrame(step);
+          } else { _origSIV.call(this, opts); }
+        };
+      }
+    </script>
     <script src="https://cdn.poehali.dev/intertnal/js/route-min.js"></script>
     <script src="https://cdn.poehali.dev/intertnal/js/telemetry-min.js"></script>
     <!-- IMPORTANT: DO NOT REMOVE THIS SCRIPT TAG OR THIS COMMENT! -->
 
-</head>
+    <meta name="pp-name" value="language-studio-landing">
+      <script src="https://cdn.poehali.dev/intertnal/js/inspector-min.js"></script>
+  </head>
 
 <body>
 <div id="root"></div>
 <script type="module" src="/src/main.tsx"></script>
 
-<!-- Yandex.Metrika counter -->
+<!-- Analytics with cookie consent -->
 <script type="text/javascript">
-    (function (m, e, t, r, i, k, a) {
-        m[i] = m[i] || function () {
-            (m[i].a = m[i].a || []).push(arguments)
-        };
-        m[i].l = 1 * new Date();
-        for (var j = 0; j < document.scripts.length; j++) {
-            if (document.scripts[j].src === r) {
-                return;
-            }
-        }
-        k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
-    })
-    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+  (function () {
+    function initAnalytics() {
+      if (window.__analyticsInited) return;
+      window.__analyticsInited = true;
 
-    ym(101026698, "init", {
+      // Yandex.Metrika #101026698
+      (function (m, e, t, r, i, k, a) {
+        m[i] = m[i] || function () { (m[i].a = m[i].a || []).push(arguments) };
+        m[i].l = 1 * new Date();
+        for (var j = 0; j < document.scripts.length; j++) { if (document.scripts[j].src === r) { return; } }
+        k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
+      })(window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+      ym(101026698, "init", {
         trustedDomains: ["poehali.dev"],
-        clickmap: true,
-        trackLinks: true,
-        accurateTrackBounce: true,
-        webvisor: true,
-        trackHash: true
-    });
+        clickmap: true, trackLinks: true, accurateTrackBounce: true, webvisor: true, trackHash: true
+      });
+
+      // Yandex.Metrika #107146254
+      (function (m, e, t, r, i, k, a) {
+        m[i] = m[i] || function () { (m[i].a = m[i].a || []).push(arguments) };
+        m[i].l = 1 * new Date();
+        for (var j = 0; j < document.scripts.length; j++) { if (document.scripts[j].src === r) { return; } }
+        k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
+      })(window, document, 'script', 'https://mc.yandex.ru/metrika/tag.js?id=107146254', 'ym');
+      ym(107146254, 'init', { ssr: true, webvisor: true, clickmap: true, ecommerce: "dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce: true, trackLinks: true });
+
+      // Top.Mail.Ru
+      var _tmr = window._tmr || (window._tmr = []);
+      _tmr.push({ id: "3753422", type: "pageView", start: (new Date()).getTime() });
+      (function (d, w, id) {
+        if (d.getElementById(id)) return;
+        var ts = d.createElement("script"); ts.type = "text/javascript"; ts.async = true; ts.id = id;
+        ts.src = "https://top-fwz1.mail.ru/js/code.js";
+        var f = function () { var s = d.getElementsByTagName("script")[0]; s.parentNode.insertBefore(ts, s); };
+        if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); }
+      })(document, window, "tmr-code");
+    }
+
+    window.__initAnalytics = initAnalytics;
+
+    // Запускаем аналитику только если пользователь дал согласие на cookie
+    try {
+      if (localStorage.getItem("hispania_cookie_choice") === "accepted") {
+        initAnalytics();
+      }
+    } catch (e) {}
+
+    // Кнопка "Принять" в баннере сообщает об этом через событие
+    window.addEventListener("cookie-accepted", initAnalytics);
+  })();
 </script>
 <noscript>
     <div><img src="https://mc.yandex.ru/watch/101026698" style="position:absolute; left:-9999px;" alt=""/></div>
+    <div><img src="https://mc.yandex.ru/watch/107146254" style="position:absolute; left:-9999px;" alt="" /></div>
+    <div><img src="https://top-fwz1.mail.ru/counter?id=3753422;js=na" style="position:absolute;left:-9999px;" alt="Top.Mail.Ru" /></div>
 </noscript>
-<!-- /Yandex.Metrika counter -->
+<!-- /Analytics with cookie consent -->
 </body>
 </html>

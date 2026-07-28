@@ -1,0 +1,1 @@
+UPDATE t_p27960186_language_studio_land.admin_settings SET password_hash = NULL, updated_at = now() WHERE id = 1;

@@ -10,5 +10,12 @@ Allow: /
 User-agent: facebookexternalhit
 Allow: /
 
+User-agent: Yandex
+Allow: /
+Clean-param: utm_source&utm_medium&utm_campaign&utm_term&utm_content
+
 User-agent: *
 Allow: /
+
+Host: https://hispania35.online
+Sitemap: https://hispania35.online/sitemap.xml

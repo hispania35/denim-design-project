@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<yml_catalog date="2026-05-18T14:18:00+03:00">
+  <shop>
+    <name>Hispania35</name>
+    <url>https://hispania35.online/</url>
+    <platform>WordPress</platform>
+    <currencies>
+      <currency id="RUR" rate="1"/>
+    </currencies>
+    <categories>
+      <category id="1">Образование</category>
+      <category id="2" parentId="1">Языковые курсы</category>
+      <category id="3" parentId="2">Испанский язык</category>
+    </categories>
+    <offers>
+      <offer id="spanish_online_1" available="true">
+        <url>https://hispania35.online/spanish-online-course</url>
+        <price>2200</price>
+        <currencyId>RUR</currencyId>
+        <categoryId>3</categoryId>
+        <vendorCode>SPANISH_ONLINE_BASIC_2026</vendorCode>
+        <name>Онлайн уроки испанского</name>
+        <description>Индивидуальные онлайн занятия испанским языком. Длительность — 60 минут.</description>
+        <picture>https://cdn.poehali.dev/projects/c066c37a-f840-40ae-bf25-35290452380d/bucket/ee602bd6-4177-4e2a-9ad0-ad2a75c7cebd.jpg</picture>
+        <delivery>false</delivery>
+        <params>
+          <param name="Тип курса">Базовый</param>
+          <param name="Формат обучения">Онлайн, индивидуально</param>
+          <param name="Длительность занятия">60 минут</param>
+          <param name="Язык обучения">Испанский</param>
+        </params>
+      </offer>
+    </offers>
+  </shop>
+</yml_catalog>

@@ -1,0 +1,54 @@
+{
+  "tests": [
+    {
+      "name": "OPTIONS preflight",
+      "method": "OPTIONS",
+      "path": "/",
+      "expectedStatus": 200
+    },
+    {
+      "name": "Send question",
+      "method": "POST",
+      "path": "/",
+      "body": {"name": "Тест", "contact": "+79000000000", "question": "Тестовый вопрос"},
+      "expectedStatus": 200,
+      "expectedBody": {"ok": true},
+      "bodyMatcher": "partial"
+    },
+    {
+      "name": "Promo invalid email",
+      "method": "POST",
+      "path": "/",
+      "body": {"mode": "promo", "name": "Тест", "email": "bad-email"},
+      "expectedStatus": 400,
+      "expectedBody": {"ok": false},
+      "bodyMatcher": "partial"
+    },
+    {
+      "name": "Получение тарифов",
+      "method": "GET",
+      "path": "/",
+      "expectedStatus": 200,
+      "expectedBody": {"plans": "array"},
+      "bodyMatcher": "partial"
+    },
+    {
+      "name": "Сохранение цен без токена отклоняется",
+      "method": "POST",
+      "path": "/",
+      "body": {"mode": "pricing_save", "plans": []},
+      "expectedStatus": 401,
+      "expectedBody": {"ok": false},
+      "bodyMatcher": "partial"
+    },
+    {
+      "name": "Подтверждение входа с неверным кодом отклоняется",
+      "method": "POST",
+      "path": "/",
+      "body": {"mode": "admin_login_verify", "code": "00000000"},
+      "expectedStatus": 401,
+      "expectedBody": {"ok": false},
+      "bodyMatcher": "partial"
+    }
+  ]
+}
