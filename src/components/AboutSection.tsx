@@ -21,7 +21,7 @@ const AboutSection = () => {
             Почему выбирают <span className="gradient-text">Hispania</span>
           </h2>
           <p className="text-muted-foreground text-lg">
-            Мы создали пространство, где изучение языков — это удовольствие, а не зубрёжка
+            Языковая студия в Вологде, где изучение языков — это удовольствие, а не зубрёжка
           </p>
         </div>
 
