@@ -1,4 +1,5 @@
 {
-  "send-question": "https://functions.poehali.dev/a9b287a8-a09a-4581-9cbd-877c2f9f2cf2",
-  "send-booking": "https://functions.poehali.dev/274de1ff-48fd-46a1-bb99-5d28f14e6f38"
+  "sitemap": "https://functions.poehali.dev/5bc63ec3-3f4b-4799-9b3d-a5c7c3044791",
+  "send-booking": "https://functions.poehali.dev/d75eba46-c4d7-474c-931e-4927e034426a",
+  "send-question": "https://functions.poehali.dev/52ba8c65-9fae-4c07-a437-cebc35f033c7"
 }
