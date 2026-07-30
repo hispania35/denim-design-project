@@ -14,7 +14,7 @@ const AdminPricing = () => {
   useMeta({
     title: "Админ-панель | Hispania",
     description: "",
-    canonical: "https://hispania35.online/",
+    canonical: "https://hispania35.ru/",
     noindex: true,
   });
 

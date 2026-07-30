@@ -17,14 +17,14 @@ const ContactsSection = lazy(() => import("@/components/ContactsSection"));
 const Footer = lazy(() => import("@/components/Footer"));
 const CookieBanner = lazy(() => import("@/components/CookieBanner"));
 
-const PAGE_URL = "https://hispania35.online/belarus";
+const PAGE_URL = "https://hispania35.ru/belarus";
 
 const BelarusPage = () => {
   useMeta({
     title: "Курсы испанского, немецкого, английского в Беларуси онлайн | Hispania",
     description:
       "Онлайн-курсы иностранных языков в Беларуси: испанский, немецкий, английский для жителей Минска, Гомеля, Бреста и других городов. Мини-группы и индивидуальные занятия, первое занятие бесплатно.",
-    canonical: "https://hispania35.online/",
+    canonical: "https://hispania35.ru/",
   });
 
   useJsonLd("belarus", {
@@ -66,7 +66,7 @@ const BelarusPage = () => {
       {
         "@type": "BreadcrumbList",
         itemListElement: [
-          { "@type": "ListItem", position: 1, name: "Главная", item: "https://hispania35.online/" },
+          { "@type": "ListItem", position: 1, name: "Главная", item: "https://hispania35.ru/" },
           { "@type": "ListItem", position: 2, name: "Беларусь", item: PAGE_URL },
         ],
       },

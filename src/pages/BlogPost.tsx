@@ -23,7 +23,7 @@ const BlogPost = () => {
   useMeta({
     title: post ? `${post.title} — Блог Hispania` : "Блог — Hispania",
     description: post?.excerpt || "",
-    canonical: `https://hispania35.online/blog/${slug || ""}`,
+    canonical: `https://hispania35.ru/blog/${slug || ""}`,
   });
 
   return (

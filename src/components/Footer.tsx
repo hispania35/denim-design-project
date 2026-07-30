@@ -4,7 +4,7 @@ import Icon from "@/components/ui/icon";
 const Footer = () => {
   const [copied, setCopied] = useState(false);
 
-  const shareUrl = "https://hispania35.online/";
+  const shareUrl = "https://hispania35.ru/";
   const shareText = "Языковая студия Hispania — испанский, немецкий, английский в Вологде и онлайн!";
 
   const handleShare = async () => {

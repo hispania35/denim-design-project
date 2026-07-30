@@ -2,7 +2,7 @@
 <yml_catalog date="2026-05-18T14:18:00+03:00">
   <shop>
     <name>Hispania35</name>
-    <url>https://hispania35.online/</url>
+    <url>https://hispania35.ru/</url>
     <platform>WordPress</platform>
     <currencies>
       <currency id="RUR" rate="1"/>
@@ -14,7 +14,7 @@
     </categories>
     <offers>
       <offer id="spanish_online_1" available="true">
-        <url>https://hispania35.online/spanish-online-course</url>
+        <url>https://hispania35.ru/spanish-online-course</url>
         <price>2200</price>
         <currencyId>RUR</currencyId>
         <categoryId>3</categoryId>

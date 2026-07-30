@@ -14,10 +14,10 @@ const ReviewsSection = () => {
   const handleShare = async () => {
     if (navigator.share) {
       try {
-        await navigator.share({ title: "Hispania", text: "Языковая студия Hispania — испанский, немецкий, английский в Вологде и онлайн!", url: "https://hispania35.online/" });
+        await navigator.share({ title: "Hispania", text: "Языковая студия Hispania — испанский, немецкий, английский в Вологде и онлайн!", url: "https://hispania35.ru/" });
       } catch (_e) { void _e; }
     } else {
-      await navigator.clipboard.writeText("https://hispania35.online/");
+      await navigator.clipboard.writeText("https://hispania35.ru/");
       setCopied(true);
       setTimeout(() => setCopied(false), 2000);
     }

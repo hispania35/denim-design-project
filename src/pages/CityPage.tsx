@@ -32,10 +32,10 @@ const CityPage = () => {
     description: city
       ? `Курсы иностранных языков ${city.nameIn} онлайн: испанский, немецкий, английский. Мини-группы до 6 человек и индивидуальные занятия, опытные преподаватели, первое занятие бесплатно.`
       : "",
-    canonical: "https://hispania35.online/",
+    canonical: "https://hispania35.ru/",
   });
 
-  const pageUrl = city ? `https://hispania35.online/${city.slug}` : "";
+  const pageUrl = city ? `https://hispania35.ru/${city.slug}` : "";
 
   useJsonLd(
     "city",
@@ -77,7 +77,7 @@ const CityPage = () => {
             {
               "@type": "BreadcrumbList",
               itemListElement: [
-                { "@type": "ListItem", position: 1, name: "Главная", item: "https://hispania35.online/" },
+                { "@type": "ListItem", position: 1, name: "Главная", item: "https://hispania35.ru/" },
                 { "@type": "ListItem", position: 2, name: city.name, item: pageUrl },
               ],
             },

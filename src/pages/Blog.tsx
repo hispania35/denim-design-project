@@ -13,7 +13,7 @@ const Blog = () => {
     title: "Блог — Языковая студия Hispania",
     description:
       "Статьи о том, как учить иностранные языки: советы, методики и полезные материалы от преподавателей студии Hispania.",
-    canonical: "https://hispania35.online/blog",
+    canonical: "https://hispania35.ru/blog",
   });
 
   const { posts, loading } = useBlogList();

@@ -3,7 +3,7 @@
   <shop>
     <name>Hispania — немецкий язык</name>
     <company>ООО «Hispania»</company>
-    <url>https://hispania35.online/</url>
+    <url>https://hispania35.ru/</url>
     <currencies>
       <currency id="RUB" rate="1"/>
     </currencies>
@@ -13,7 +13,7 @@
     </categories>
     <offers>
       <offer id="1" type="service" available="true">
-        <url>https://hispania35.online/goethe-zertifikat</url>
+        <url>https://hispania35.ru/goethe-zertifikat</url>
         <price>2200</price>
         <currencyId>RUB</currencyId>
         <name>Подготовка к сдаче экзамена Goethe‑Zertifikat (онлайн, 60 минут)</name>
