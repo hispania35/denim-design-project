@@ -5,7 +5,7 @@ from typing import Dict, Any
 import psycopg2
 
 BLOG_TABLE = 't_p27960186_language_studio_land.blog_posts'
-SITE_URL = 'https://hispania35.online'
+SITE_URL = 'https://hispania35.ru'
 
 STATIC_URLS = [
     ('/', '1.0', 'weekly'),
