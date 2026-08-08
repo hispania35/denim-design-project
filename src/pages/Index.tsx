@@ -1,5 +1,6 @@
 import { Suspense } from "react";
 import { lazyWithRetry } from "@/lib/lazyWithRetry";
+import SectionFallback from "@/components/SectionFallback";
 import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
 import AboutSection from "@/components/AboutSection";
@@ -25,7 +26,7 @@ const Index = () => {
       {isVisible("hero") && <HeroSection />}
       {isVisible("about") && <AboutSection />}
       {isVisible("languages") && <LanguagesSection />}
-      <Suspense fallback={null}>
+      <Suspense fallback={<SectionFallback cards={3} tall />}>
         {isVisible("pricing") && <PricingSection />}
         {isVisible("teachers") && <TeachersSection />}
         {isVisible("reviews") && <ReviewsSection />}

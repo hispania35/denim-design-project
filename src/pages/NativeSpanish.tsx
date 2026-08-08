@@ -1,5 +1,6 @@
 import { Suspense } from "react";
 import { lazyWithRetry } from "@/lib/lazyWithRetry";
+import SectionFallback from "@/components/SectionFallback";
 import { Button } from "@/components/ui/button";
 import Icon from "@/components/ui/icon";
 import Header from "@/components/Header";
@@ -238,7 +239,7 @@ const NativeSpanish = () => {
         </div>
       </section>
 
-      <Suspense fallback={null}>
+      <Suspense fallback={<SectionFallback cards={3} />}>
         <ReviewsSection />
         <div id="booking" className="scroll-mt-20">
           <BookingSection />

@@ -1,5 +1,6 @@
 import { Suspense } from "react";
 import { lazyWithRetry } from "@/lib/lazyWithRetry";
+import SectionFallback from "@/components/SectionFallback";
 import { useLocation } from "react-router-dom";
 import NotFoundPage from "@/pages/NotFoundPage";
 import Header from "@/components/Header";
@@ -97,7 +98,7 @@ const CityPage = () => {
       <CityHero city={city} />
       <AboutSectionOnline />
       <LanguagesSection />
-      <Suspense fallback={null}>
+      <Suspense fallback={<SectionFallback cards={3} tall />}>
         <PricingSection currency={city.country === "by" ? "byn" : "rub"} />
         <TeachersSection />
         <ReviewsSection />

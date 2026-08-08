@@ -1,5 +1,6 @@
 import { Suspense } from "react";
 import { lazyWithRetry } from "@/lib/lazyWithRetry";
+import SectionFallback from "@/components/SectionFallback";
 import { useParams, Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Icon from "@/components/ui/icon";
@@ -99,7 +100,7 @@ const BlogPost = () => {
       </article>
 
       {post && (
-        <Suspense fallback={null}>
+        <Suspense fallback={<SectionFallback cards={2} />}>
           <BookingSection />
           <ContactsSection />
           <Footer />
