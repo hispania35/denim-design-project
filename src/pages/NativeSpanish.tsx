@@ -117,7 +117,7 @@ const NativeSpanish = () => {
 
               <p className="mt-6 text-lg md:text-xl text-muted-foreground leading-relaxed">
                 Загляните на настоящее занятие: живая речь, смех и разговор с первой минуты.
-                Приходите на бесплатный урок и почувствуйте Испанию, не выходя из дома.
+                Приходите на бесплатный урок и почувствуйте Испанию рядом.
               </p>
 
               <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
