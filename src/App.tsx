@@ -23,6 +23,7 @@ const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy"));
 const Oferta = lazy(() => import("./pages/Oferta"));
 const CityPage = lazy(() => import("./pages/CityPage"));
 const BelarusPage = lazy(() => import("./pages/BelarusPage"));
+const NativeSpanish = lazy(() => import("./pages/NativeSpanish"));
 const AdminPricing = lazy(() => import("./pages/AdminPricing"));
 const Blog = lazy(() => import("./pages/Blog"));
 const BlogPost = lazy(() => import("./pages/BlogPost"));
@@ -42,6 +43,7 @@ const App = () => (
             <Route path="/privacy" element={<PrivacyPolicy />} />
             <Route path="/oferta" element={<Oferta />} />
             <Route path="/belarus" element={<BelarusPage />} />
+            <Route path="/native" element={<NativeSpanish />} />
             <Route path="/admin" element={<AdminPricing />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/blog/:slug" element={<BlogPost />} />
