@@ -8,7 +8,6 @@ const navLinks = [
   { label: "Главная", href: "/#hero" },
   { label: "О студии", href: "/#about" },
   { label: "Языки", href: "/#languages" },
-  { label: "С носителем", href: "/native" },
   { label: "Отзывы", href: "/#reviews" },
   { label: "Блог", href: "/blog" },
   { label: "FAQ", href: "/#faq" },
