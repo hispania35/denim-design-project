@@ -1,4 +1,5 @@
-import { lazy, Suspense } from "react";
+import { Suspense } from "react";
+import { lazyWithRetry } from "@/lib/lazyWithRetry";
 import { useParams, Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Icon from "@/components/ui/icon";
@@ -6,10 +7,10 @@ import { Button } from "@/components/ui/button";
 import { useBlogPost, formatDate } from "@/hooks/useBlog";
 import { useMeta } from "@/hooks/useMeta";
 
-const BookingSection = lazy(() => import("@/components/BookingSection"));
-const ContactsSection = lazy(() => import("@/components/ContactsSection"));
-const Footer = lazy(() => import("@/components/Footer"));
-const CookieBanner = lazy(() => import("@/components/CookieBanner"));
+const BookingSection = lazyWithRetry(() => import("@/components/BookingSection"));
+const ContactsSection = lazyWithRetry(() => import("@/components/ContactsSection"));
+const Footer = lazyWithRetry(() => import("@/components/Footer"));
+const CookieBanner = lazyWithRetry(() => import("@/components/CookieBanner"));
 
 const scrollToBooking = () => {
   const el = document.getElementById("booking");

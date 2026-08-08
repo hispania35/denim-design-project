@@ -1,15 +1,16 @@
-import { lazy, Suspense } from "react";
+import { Suspense } from "react";
+import { lazyWithRetry } from "@/lib/lazyWithRetry";
 import { Button } from "@/components/ui/button";
 import Icon from "@/components/ui/icon";
 import Header from "@/components/Header";
 import { useMeta } from "@/hooks/useMeta";
 import { useJsonLd } from "@/hooks/useJsonLd";
 
-const BookingSection = lazy(() => import("@/components/BookingSection"));
-const ReviewsSection = lazy(() => import("@/components/ReviewsSection"));
-const ContactsSection = lazy(() => import("@/components/ContactsSection"));
-const Footer = lazy(() => import("@/components/Footer"));
-const CookieBanner = lazy(() => import("@/components/CookieBanner"));
+const BookingSection = lazyWithRetry(() => import("@/components/BookingSection"));
+const ReviewsSection = lazyWithRetry(() => import("@/components/ReviewsSection"));
+const ContactsSection = lazyWithRetry(() => import("@/components/ContactsSection"));
+const Footer = lazyWithRetry(() => import("@/components/Footer"));
+const CookieBanner = lazyWithRetry(() => import("@/components/CookieBanner"));
 
 const PAGE_URL = "https://hispania35.ru/native";
 const VIDEO_URL =

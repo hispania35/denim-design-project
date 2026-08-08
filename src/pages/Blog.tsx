@@ -1,12 +1,13 @@
-import { lazy, Suspense } from "react";
+import { Suspense } from "react";
+import { lazyWithRetry } from "@/lib/lazyWithRetry";
 import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Icon from "@/components/ui/icon";
 import { useBlogList, formatDate } from "@/hooks/useBlog";
 import { useMeta } from "@/hooks/useMeta";
 
-const Footer = lazy(() => import("@/components/Footer"));
-const CookieBanner = lazy(() => import("@/components/CookieBanner"));
+const Footer = lazyWithRetry(() => import("@/components/Footer"));
+const CookieBanner = lazyWithRetry(() => import("@/components/CookieBanner"));
 
 const Blog = () => {
   useMeta({
