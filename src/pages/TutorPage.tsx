@@ -7,6 +7,7 @@ import Header from "@/components/Header";
 import { Button } from "@/components/ui/button";
 import Icon from "@/components/ui/icon";
 import { getTutorBySlug, TUTOR_CITY } from "@/data/tutors";
+import { useContent } from "@/hooks/useContent";
 import { useMeta } from "@/hooks/useMeta";
 import { useJsonLd } from "@/hooks/useJsonLd";
 
@@ -21,6 +22,7 @@ const CookieBanner = lazyWithRetry(() => import("@/components/CookieBanner"));
 const TutorPage = () => {
   const { pathname } = useLocation();
   const tutor = getTutorBySlug(pathname.replace(/^\//, ""));
+  const hero = useContent("hero");
   const pageUrl = tutor ? `https://hispania35.ru/${tutor.slug}` : "";
 
   useMeta({
@@ -129,7 +131,7 @@ const TutorPage = () => {
 
           <div className="mt-10 flex flex-wrap gap-x-10 gap-y-4 justify-center">
             {[
-              { value: "15 лет", label: "опыта студии" },
+              { value: hero.stat2Value, label: `${hero.stat2Label} студии` },
               { value: "до 5", label: "человек в группе" },
               { value: "0 ₽", label: "первый урок" },
             ].map((s) => (
