@@ -1,4 +1,4 @@
-import { Suspense } from "react";
+import { Suspense, useEffect } from "react";
 import { lazyWithRetry } from "@/lib/lazyWithRetry";
 import SectionFallback from "@/components/SectionFallback";
 import { Button } from "@/components/ui/button";
@@ -47,6 +47,22 @@ const steps = [
 ];
 
 const NativeSpanish = () => {
+  useEffect(() => {
+    const w = window as unknown as { _tmr?: unknown[]; __tmrNative?: boolean };
+    if (w.__tmrNative) return;
+    w.__tmrNative = true;
+    w._tmr = w._tmr || [];
+    w._tmr.push({ id: "3786078", type: "pageView", start: new Date().getTime() });
+    if (!document.getElementById("tmr-code")) {
+      const ts = document.createElement("script");
+      ts.type = "text/javascript";
+      ts.async = true;
+      ts.id = "tmr-code";
+      ts.src = "https://top-fwz1.mail.ru/js/code.js";
+      document.head.appendChild(ts);
+    }
+  }, []);
+
   useMeta({
     title: "Испанский с носителем языка — приглашение на обучение | Hispania",
     description:
