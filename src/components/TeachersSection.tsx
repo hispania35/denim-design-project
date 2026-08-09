@@ -21,7 +21,7 @@ const TeachersSection = () => {
             <div className="overflow-hidden h-80">
               <img
                 src={c.image}
-                alt="Преподаватель испанского языка Седова Ольга — языковая студия Hispania"
+                alt={`${c.name} — преподаватель языковой студии Hispania`}
                 loading="lazy"
                 className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
               />
