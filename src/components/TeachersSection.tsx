@@ -46,7 +46,7 @@ const TeachersSection = () => {
               .map((p) => (
                 <p
                   key={p.slice(0, 30)}
-                  className={`text-muted-foreground leading-relaxed${p.startsWith("Опыт и профессиональное развитие:") ? " font-bold" : ""}`}
+                  className={`text-muted-foreground leading-relaxed${p.startsWith("Опыт и профессиональное развитие:") || p.startsWith("Направления работы:") ? " font-bold" : ""}`}
                 >
                   {p}
                 </p>
