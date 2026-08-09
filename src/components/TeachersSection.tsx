@@ -16,19 +16,26 @@ const TeachersSection = () => {
           </h2>
         </div>
 
-        <div className="flex justify-center">
-          <div className="hover-lift group text-center rounded-2xl overflow-hidden bg-white border border-border/50 shadow-sm max-w-sm w-full">
-            <div className="overflow-hidden h-80">
-              <img
-                src={c.image}
-                alt={`${c.name} — преподаватель языковой студии Hispania`}
-                loading="lazy"
-                className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
-              />
-            </div>
-            <div className="p-6">
-              <p className="text-muted-foreground text-sm">{c.description}</p>
-            </div>
+        <div className="grid md:grid-cols-[minmax(0,380px)_1fr] gap-8 md:gap-12 items-start max-w-4xl mx-auto">
+          <div className="group overflow-hidden rounded-2xl border border-border/50 bg-white shadow-sm">
+            <img
+              src={c.image}
+              alt={`${c.name} — преподаватель языковой студии Hispania`}
+              loading="lazy"
+              className="w-full aspect-[3/4] object-cover object-top group-hover:scale-105 transition-transform duration-500"
+            />
+          </div>
+
+          <div className="space-y-4">
+            {c.description
+              .split(/\n+/)
+              .map((p) => p.trim())
+              .filter(Boolean)
+              .map((p) => (
+                <p key={p.slice(0, 30)} className="text-muted-foreground leading-relaxed">
+                  {p}
+                </p>
+              ))}
           </div>
         </div>
       </div>
