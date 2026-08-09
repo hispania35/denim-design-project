@@ -1,3 +1,4 @@
+import { Button } from "@/components/ui/button";
 import Icon from "@/components/ui/icon";
 import { useContent } from "@/hooks/useContent";
 
@@ -17,13 +18,24 @@ const TeachersSection = () => {
         </div>
 
         <div className="grid md:grid-cols-[minmax(0,380px)_1fr] gap-8 md:gap-12 items-start max-w-4xl mx-auto">
-          <div className="group overflow-hidden rounded-2xl border border-border/50 bg-white shadow-sm md:sticky md:top-24">
-            <img
-              src={c.image}
-              alt={`${c.name} — преподаватель языковой студии Hispania`}
-              loading="lazy"
-              className="w-full aspect-[3/4] object-cover object-top group-hover:scale-105 transition-transform duration-500"
-            />
+          <div className="md:sticky md:top-24">
+            <div className="group overflow-hidden rounded-2xl border border-border/50 bg-white shadow-sm">
+              <img
+                src={c.image}
+                alt={`${c.name} — преподаватель языковой студии Hispania`}
+                loading="lazy"
+                className="w-full aspect-[3/4] object-cover object-top group-hover:scale-105 transition-transform duration-500"
+              />
+            </div>
+            <Button
+              className="w-full mt-4 h-12 gradient-primary text-white border-0 font-heading font-semibold"
+              onClick={() =>
+                document.getElementById("booking")?.scrollIntoView({ behavior: "smooth" })
+              }
+            >
+              <Icon name="CalendarCheck" size={18} className="mr-2" />
+              Записаться к преподавателю
+            </Button>
           </div>
 
           <div className="space-y-4">
