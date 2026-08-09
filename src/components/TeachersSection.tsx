@@ -17,7 +17,7 @@ const TeachersSection = () => {
         </div>
 
         <div className="grid md:grid-cols-[minmax(0,380px)_1fr] gap-8 md:gap-12 items-start max-w-4xl mx-auto">
-          <div className="group overflow-hidden rounded-2xl border border-border/50 bg-white shadow-sm">
+          <div className="group overflow-hidden rounded-2xl border border-border/50 bg-white shadow-sm md:sticky md:top-24">
             <img
               src={c.image}
               alt={`${c.name} — преподаватель языковой студии Hispania`}
