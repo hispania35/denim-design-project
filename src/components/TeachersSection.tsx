@@ -44,7 +44,7 @@ const TeachersSection = () => {
               .map((p) => p.trim())
               .filter(Boolean)
               .map((p) => (
-                <p key={p.slice(0, 30)} className="text-muted-foreground leading-relaxed font-bold">
+                <p key={p.slice(0, 30)} className="text-muted-foreground leading-relaxed">
                   {p}
                 </p>
               ))}
