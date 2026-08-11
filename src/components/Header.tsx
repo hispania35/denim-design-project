@@ -14,9 +14,17 @@ const navLinks = [
   { label: "Контакты", href: "/#contacts" },
 ];
 
+const sectionLinks = [
+  { label: "Носители языка", href: "/native" },
+  { label: "Репетитор испанского", href: "/repetitor-ispanskogo-vologda" },
+  { label: "Репетитор немецкого", href: "/repetitor-nemeckogo-vologda" },
+  { label: "Репетитор английского", href: "/repetitor-angliyskogo-vologda" },
+];
+
 const Header = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [askOpen, setAskOpen] = useState(false);
+  const [sectionsOpen, setSectionsOpen] = useState(false);
 
   useEffect(() => {
     if (window.location.search.includes("ask")) {
@@ -48,6 +56,31 @@ const Header = () => {
                 {link.label}
               </a>
             ))}
+            <div
+              className="relative"
+              onMouseEnter={() => setSectionsOpen(true)}
+              onMouseLeave={() => setSectionsOpen(false)}
+            >
+              <button className="flex items-center gap-1 text-sm font-medium text-foreground/70 hover:text-foreground transition-colors">
+                Разделы
+                <Icon name="ChevronDown" size={14} />
+              </button>
+              {sectionsOpen && (
+                <div className="absolute right-0 top-full pt-3">
+                  <div className="glass rounded-xl border shadow-lg py-2 min-w-56">
+                    {sectionLinks.map((link) => (
+                      <a
+                        key={link.href}
+                        href={link.href}
+                        className="block px-4 py-2 text-sm font-medium text-foreground/70 hover:text-foreground hover:bg-foreground/5 transition-colors whitespace-nowrap"
+                      >
+                        {link.label}
+                      </a>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
           </nav>
 
           <div className="hidden md:flex items-center gap-3">
@@ -87,6 +120,24 @@ const Header = () => {
                 {link.label}
               </a>
             ))}
+            <button
+              className="flex items-center gap-1 w-full py-3 text-sm font-medium text-foreground/70 hover:text-foreground transition-colors"
+              onClick={() => setSectionsOpen(!sectionsOpen)}
+            >
+              Разделы
+              <Icon name={sectionsOpen ? "ChevronUp" : "ChevronDown"} size={14} />
+            </button>
+            {sectionsOpen &&
+              sectionLinks.map((link) => (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  className="block py-2 pl-4 text-sm font-medium text-foreground/70 hover:text-foreground transition-colors"
+                  onClick={() => setMobileOpen(false)}
+                >
+                  {link.label}
+                </a>
+              ))}
             <Button
               variant="outline"
               className="w-full mt-2 font-heading font-semibold"
