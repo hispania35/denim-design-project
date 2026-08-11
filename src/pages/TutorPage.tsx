@@ -131,7 +131,7 @@ const TutorPage = () => {
 
           <div className="mt-10 flex flex-wrap gap-x-10 gap-y-4 justify-center">
             {[
-              { value: hero.stat2Value, label: `${hero.stat2Label} студии` },
+              { value: hero.stat2Value, label: hero.stat2Label },
               { value: "до 5", label: "человек в группе" },
               { value: "0 ₽", label: "первый урок" },
             ].map((s) => (
