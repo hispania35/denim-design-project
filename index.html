@@ -50,16 +50,19 @@
         title = "Курсы испанского, немецкого, английского " + C[slug][0] + " онлайн | Hispania";
         desc = "Курсы иностранных языков " + C[slug][0] + " онлайн: испанский, немецкий, английский. Мини-группы до 5 человек и индивидуальные занятия, опытные преподаватели, первое занятие бесплатно.";
       }
+      var set = function (sel, attr, val) {
+        var el = document.head.querySelector(sel);
+        if (el) el.setAttribute(attr, val);
+      };
       if (title) {
-        var set = function (sel, attr, val) {
-          var el = document.head.querySelector(sel);
-          if (el) el.setAttribute(attr, val);
-        };
         document.title = title;
         set('meta[name="description"]', "content", desc);
         set('meta[property="og:title"]', "content", title);
         set('meta[property="og:description"]', "content", desc);
       }
+      var canonicalUrl = slug ? SITE + "/" + slug : SITE + "/";
+      set('link[rel="canonical"]', "href", canonicalUrl);
+      set('meta[property="og:url"]', "content", canonicalUrl);
     })();
     </script>
     <link rel="icon" type="image/png" href="https://cdn.poehali.dev/projects/c066c37a-f840-40ae-bf25-35290452380d/bucket/e2a102db-1630-4af2-9bfc-bad201f7b790.png">
