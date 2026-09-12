@@ -50,17 +50,28 @@
         title = "Курсы испанского, немецкого, английского " + C[slug][0] + " онлайн | Hispania";
         desc = "Курсы иностранных языков " + C[slug][0] + " онлайн: испанский, немецкий, английский. Мини-группы до 5 человек и индивидуальные занятия, опытные преподаватели, первое занятие бесплатно.";
       }
+      var SELF = {
+        "native": ["Испанский с носителем языка — приглашение на обучение | Hispania", "Занятия испанским с носителем языка онлайн и в группе. Живое произношение, разговорная практика с первого урока, мини-группы до 5 человек. Первое занятие бесплатно."],
+        "repetitor-ispanskogo-vologda": ["Репетитор испанского языка в Вологде — занятия с нуля | Hispania", "Репетитор испанского языка в Вологде: индивидуальные занятия и мини-группы, обучение с нуля и подготовка к DELE. Первый урок бесплатно. Очно и онлайн."],
+        "repetitor-nemeckogo-vologda": ["Репетитор немецкого языка в Вологде — подготовка к Goethe | Hispania", "Репетитор немецкого языка в Вологде: индивидуальные занятия и мини-группы, обучение с нуля и подготовка к экзаменам Goethe. Первый урок бесплатно. Очно и онлайн."],
+        "repetitor-angliyskogo-vologda": ["Репетитор английского языка в Вологде — разговорный для детей и взрослых | Hispania", "Репетитор английского языка в Вологде: разговорный английский для детей и взрослых, индивидуальные занятия и мини-группы. Первый урок бесплатно. Очно и онлайн."],
+        "blog": ["Блог — Языковая студия Hispania", "Статьи о том, как учить иностранные языки: советы, методики и полезные материалы от преподавателей студии Hispania."]
+      };
       var set = function (sel, attr, val) {
         var el = document.head.querySelector(sel);
         if (el) el.setAttribute(attr, val);
       };
+      if (SELF[slug]) {
+        title = SELF[slug][0];
+        desc = SELF[slug][1];
+      }
       if (title) {
         document.title = title;
         set('meta[name="description"]', "content", desc);
         set('meta[property="og:title"]', "content", title);
         set('meta[property="og:description"]', "content", desc);
       }
-      var canonicalUrl = slug ? SITE + "/" + slug : SITE + "/";
+      var canonicalUrl = SELF[slug] || slug.indexOf("blog/") === 0 ? SITE + "/" + slug : SITE + "/";
       set('link[rel="canonical"]', "href", canonicalUrl);
       set('meta[property="og:url"]', "content", canonicalUrl);
     })();
