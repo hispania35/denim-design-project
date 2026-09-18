@@ -14,7 +14,14 @@
     <meta name="yandex" content="index, follow"/>
     <meta name="zen-verification" content="qsxcXmPYuOcQW80fbOvaHNXt0EezMHbL5d3a8TMtYkJRnHCpY9RNOtuBXJQs8OdD" />
     <meta name="google-site-verification" content="R3uiRTGVx-c19J6i54tpgj8Bu8eZEezUjUrLXDlXH08" />
-    <link rel="canonical" href="https://hispania35.ru/"/>
+    <script>
+    (function () {
+      var p = location.pathname.replace(/^\/+|\/+$/g, "");
+      var SELF_RE = /^(native|blog|blog\/.+|repetitor-[a-z]+-vologda|privacy|oferta)$/;
+      var href = "https://hispania35.ru/" + (SELF_RE.test(p) ? p : "");
+      document.write('<link rel="canonical" href="' + href + '"/>');
+    })();
+    </script>
     <script>
     (function () {
       var SITE = "https://hispania35.ru";
