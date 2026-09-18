@@ -3,14 +3,14 @@ import { LucideProps } from 'lucide-react';
 import {
   MessageCircle, Menu, X, Sparkles, ArrowRight, Heart, Users,
   Monitor, Target, Award, Globe, Check, Tag, GraduationCap,
-  Star, Share2, HelpCircle, ChevronDown, CalendarCheck, Clock,
+  Star, Share2, HelpCircle, ChevronDown, ChevronRight, CalendarCheck, Clock,
   Gift, FileText, Loader2, Phone, Mail, MapPin, Send, CircleAlert,
 } from 'lucide-react';
 
 const icons: Record<string, React.FC<LucideProps>> = {
   MessageCircle, Menu, X, Sparkles, ArrowRight, Heart, Users,
   Monitor, Target, Award, Globe, Check, Tag, GraduationCap,
-  Star, Share2, HelpCircle, ChevronDown, CalendarCheck, Clock,
+  Star, Share2, HelpCircle, ChevronDown, ChevronRight, CalendarCheck, Clock,
   Gift, FileText, Loader2, Phone, Mail, MapPin, Send, CircleAlert,
 };
 

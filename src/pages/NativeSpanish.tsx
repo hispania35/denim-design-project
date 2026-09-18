@@ -4,6 +4,7 @@ import SectionFallback from "@/components/SectionFallback";
 import { Button } from "@/components/ui/button";
 import Icon from "@/components/ui/icon";
 import Header from "@/components/Header";
+import PageBreadcrumbs from "@/components/PageBreadcrumbs";
 import { useMeta } from "@/hooks/useMeta";
 import { useJsonLd } from "@/hooks/useJsonLd";
 
@@ -115,7 +116,9 @@ const NativeSpanish = () => {
     <div className="min-h-screen">
       <Header />
 
-      <section className="relative overflow-hidden pt-28 pb-16 md:pt-36 md:pb-24">
+      <PageBreadcrumbs current="Испанский с носителем" />
+
+      <section className="relative overflow-hidden pt-6 pb-16 md:pt-10 md:pb-24">
         <div className="absolute -top-24 -right-24 w-72 h-72 md:w-96 md:h-96 rounded-full gradient-primary opacity-20 blur-3xl" />
         <div className="absolute -bottom-32 -left-24 w-72 h-72 md:w-96 md:h-96 rounded-full gradient-primary opacity-10 blur-3xl" />
 
