@@ -26,6 +26,7 @@ const Oferta = lazyWithRetry(() => import("./pages/Oferta"));
 const CityPage = lazyWithRetry(() => import("./pages/CityPage"));
 const BelarusPage = lazyWithRetry(() => import("./pages/BelarusPage"));
 const NativeSpanish = lazyWithRetry(() => import("./pages/NativeSpanish"));
+const PlatformRedirect = lazyWithRetry(() => import("./pages/PlatformRedirect"));
 const TutorPage = lazyWithRetry(() => import("./pages/TutorPage"));
 const AdminPricing = lazyWithRetry(() => import("./pages/AdminPricing"));
 const Blog = lazyWithRetry(() => import("./pages/Blog"));
@@ -47,6 +48,7 @@ const App = () => (
             <Route path="/oferta" element={<Oferta />} />
             <Route path="/belarus" element={<BelarusPage />} />
             <Route path="/native" element={<NativeSpanish />} />
+            <Route path="/platforma" element={<PlatformRedirect />} />
             <Route path="/admin" element={<AdminPricing />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/blog/:slug" element={<BlogPost />} />

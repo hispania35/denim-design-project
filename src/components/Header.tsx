@@ -10,6 +10,7 @@ const navLinks = [
   { label: "Языки", href: "/#languages" },
   { label: "Отзывы", href: "/#reviews" },
   { label: "Блог", href: "/blog" },
+  { label: "Платформа", href: "/platforma" },
   { label: "FAQ", href: "/#faq" },
   { label: "Контакты", href: "/#contacts" },
 ];
