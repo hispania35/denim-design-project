@@ -1,6 +1,8 @@
 import { useEffect } from "react";
 
-const PLATFORM_URL = "https://language-learning-platform-4--preview.poehali.dev/";
+const PLATFORM_URL = "https://hispania-35.ru/";
+const LOGO_URL =
+  "https://cdn.poehali.dev/projects/a8294440-d983-4c3b-a5e7-85b5d812d683/bucket/3e27e9ba-d1eb-4bf1-8b0a-599d41647b68.png";
 
 const PlatformRedirect = () => {
   useEffect(() => {
@@ -15,11 +17,14 @@ const PlatformRedirect = () => {
   }, []);
 
   return (
-    <div className="min-h-screen flex items-center justify-center px-4">
+    <div className="min-h-screen flex items-center justify-center px-4 bg-white">
       <div className="text-center">
-        <div className="mx-auto mb-6 h-10 w-10 rounded-full border-2 border-primary border-t-transparent animate-spin" />
-        <h1 className="font-heading text-2xl font-bold">Открываем платформу обучения</h1>
-        <p className="mt-3 text-muted-foreground">
+        <img
+          src={LOGO_URL}
+          alt="Hispania 35"
+          className="mx-auto w-48 h-48 object-contain animate-pulse"
+        />
+        <p className="mt-4 text-sm text-muted-foreground">
           Если переход не произошёл,{" "}
           <a href={PLATFORM_URL} className="text-primary font-medium underline">
             нажмите сюда
